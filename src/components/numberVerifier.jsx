@@ -6,7 +6,7 @@ import SignUpFrom from "./signUpFrom";
 const NumberVerifier = ({ mode, history }) => {
   const [number, setNumber] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
-
+ 
   const handleOtpVerify = () => {
     let recaptcha = new firebase.auth.RecaptchaVerifier("recaptcha-container");
     const num = `+91${number}`;
@@ -18,7 +18,6 @@ const NumberVerifier = ({ mode, history }) => {
         confirmation
           .confirm(code)
           .then((result) => {
-            setNumber("");
             if (mode === "Sign Up") {
               setIsSignUp(true);
             } else {

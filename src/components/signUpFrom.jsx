@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const api = "http://localhost:8000/signup";
+
 
 const SignUpFrom = ({ number, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
   const handleSubmit = async () => {
-    const { data } = await axios.post(api, {
-      number,
-      name,
-      email,
-    });
-    if (data) {
+    try {
+      const {data}  = await axios.post("http://localhost:8000/signup", {
+        number,
+        name,
+        email,
+      });
+      if (data)
       history.push("/success-signup");
+    } catch (e) {
+      console.error(e);
     }
   };
 
@@ -49,6 +52,7 @@ const SignUpFrom = ({ number, history }) => {
             <button
               disabled={name ? (email ? false : true) : true}
               className="btn btn-primary"
+              type="button"
               onClick={handleSubmit}
             >
               Submit
