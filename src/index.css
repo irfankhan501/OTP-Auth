@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+label, h1, h3 {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #ebeef3;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
