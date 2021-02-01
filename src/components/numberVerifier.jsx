@@ -36,7 +36,7 @@ const NumberVerifier = ({ mode, history }) => {
       number,
     });
     console.log(result);
-    if (result.data.length === 1) {
+    if (result.data.length > 1) {
       history.push("/success-signin");
     } else {
       history.push("/fail-signin");
